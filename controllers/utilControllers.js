@@ -28,8 +28,8 @@ module.exports = app => {
 
     app.post('/generate-pdf', async (req, res) => {
         try {
-            await generatePdf(req, res);
-            res.render('thanks')
+            const fileName = await generatePdf(req, res);
+            res.render('thanks', { data: fileName })
         } catch (error) {
             res.render('error', { data: error.message })
         }

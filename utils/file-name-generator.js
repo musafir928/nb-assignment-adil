@@ -12,4 +12,6 @@ const filename = new UniqueFilename(
 
 const query = 'pdf';
 
-module.exports.fileName = filename.generate(query).path;
+const fileNameObject = filename.generate(query);
+
+module.exports = fileNameObject;

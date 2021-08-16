@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer')
-const { fileName } = require('./file-name-generator')
+const { path, fullName } = require('./file-name-generator')
 
 module.exports.generatePdf = async function (req, res) {
     try {
@@ -12,11 +12,12 @@ module.exports.generatePdf = async function (req, res) {
             extraForm.parentNode.removeChild(extraForm);
         })
         await page.pdf({
-            path: fileName,
+            path: path,
             format: 'A4',
             printBackground: true
         })
         await browser.close()
+        return fullName
     } catch (error) {
         console.error(error.message)
         res.render('error', { data: error.message })
