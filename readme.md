@@ -38,6 +38,7 @@ Install the dependencies and devDependencies and start the server.
 
 ```sh
 unzip downloaded file
+> // or git clone https://github.com/musafir928/nb-assignment-adil.git the cd nb-assignment-adil
 > cd new-bees-assignment
 > npm i
 > npm run dev
