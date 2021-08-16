@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: 'template preview' }) %>
+
+    <body>
+        <div class="container template-container">
+            <header>
+                <% if (data.logo) { %>
+                <img src="<%= data.logo %>" />
+                <% } if (data.title) { %>
+                <h3 class="page-title"><%= data.title %></h3>
+                <% } %>
+            </header>
+
+            <% if (data.description) { %>
+            <i> <%= data.description %> </i>
+            <% } if (data.textImportant) { %>
+            <pre><b>  <%= data.textImportant %></b></pre>
+            <% } if (data.text) { data.text.forEach(t=>{ %>
+            <pre>  <%= t %></pre>
+            <%})}%>
+
+            <table>
+                <tr>
+                    <th class="column-x">Column1</th>
+                    <th class="column-s">Column2</th>
+                </tr>
+                <tr class="empty">
+                    <td colspan="2" class="column-x"></td>
+                </tr>
+                <tr>
+                    <td class="column-x"></td>
+                    <td class="column-s"></td>
+                </tr>
+                <tr>
+                    <td class="column-x"></td>
+                    <td class="column-s"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="form-fixed">
+            <form action="/generate-pdf" method="post">
+                <input type="submit" value="Generate PDF" />
+            </form>
+        </div>
+    </body>
+</html>

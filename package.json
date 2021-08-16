@@ -1,0 +1,23 @@
+{
+    "name": "pdf-generator",
+    "description": "a simple automated pdf generator using puppeteer",
+    "version": "1.0.0",
+    "entryPoint": "server.js",
+    "scripts": {
+        "dev": "node server.js"
+    },
+    "keywords": [
+        "puppeteer",
+        "pdf-generator",
+        "automation",
+        "template"
+    ],
+    "author": "Adil",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "puppeteer": "^10.2.0",
+        "unique-filename-generator": "^1.0.0"
+    }
+}
