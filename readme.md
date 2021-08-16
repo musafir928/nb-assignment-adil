@@ -18,6 +18,8 @@ Adil Ablimit
 -   Apis for util functions: generate-template and generate-pdf using express.
 -   Template engine: EJS.
 -   MVC file structure.
+-   `Generate Simple Template` button on home page will directly generate a template with simpleData.json (which logo, title and description not included)
+-   `!important: form can be submitted without filled, and default data will be take place of none inputted form fields`
 
 ## Tech
 
